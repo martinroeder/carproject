@@ -14,6 +14,7 @@
 		203751761C4EC8EA00EAF142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203751741C4EC8EA00EAF142 /* LaunchScreen.storyboard */; };
 		203751811C4EC8EA00EAF142 /* GryoscopeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203751801C4EC8EA00EAF142 /* GryoscopeTestTests.swift */; };
 		2037518C1C4EC8EA00EAF142 /* GryoscopeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2037518B1C4EC8EA00EAF142 /* GryoscopeTestUITests.swift */; };
+		209058C81C54156E0072B121 /* ReportingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209058C71C54156E0072B121 /* ReportingBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		203751871C4EC8EA00EAF142 /* GryoscopeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GryoscopeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2037518B1C4EC8EA00EAF142 /* GryoscopeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GryoscopeTestUITests.swift; sourceTree = "<group>"; };
 		2037518D1C4EC8EA00EAF142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		209058C71C54156E0072B121 /* ReportingBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportingBar.swift; path = ../ReportingBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		2037516A1C4EC8EA00EAF142 /* GryoscopeTest */ = {
 			isa = PBXGroup;
 			children = (
+				209058C71C54156E0072B121 /* ReportingBar.swift */,
 				2037516B1C4EC8EA00EAF142 /* AppDelegate.swift */,
 				2037516D1C4EC8EA00EAF142 /* ViewController.swift */,
 				2037516F1C4EC8EA00EAF142 /* Main.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2037516E1C4EC8EA00EAF142 /* ViewController.swift in Sources */,
+				209058C81C54156E0072B121 /* ReportingBar.swift in Sources */,
 				2037516C1C4EC8EA00EAF142 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +488,7 @@
 				203751921C4EC8EA00EAF142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		203751931C4EC8EA00EAF142 /* Build configuration list for PBXNativeTarget "GryoscopeTestTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				203751951C4EC8EA00EAF142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		203751961C4EC8EA00EAF142 /* Build configuration list for PBXNativeTarget "GryoscopeTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				203751981C4EC8EA00EAF142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -30,14 +30,28 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPV-Pf-UJM">
-                                <rect key="frame" x="20" y="300" width="560" height="150"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mt-FT-9qX" userLabel="FillerView">
+                                <rect key="frame" x="20" y="355" width="280" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="e4J-gG-ddY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWj-AF-3KF" userLabel="ReportingView" customClass="ReportingBar" customModule="GryoscopeTest" customModuleProvider="target">
+                                <rect key="frame" x="300" y="355" width="280" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QKT-c7-SVB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-4k-Ugt">
+                                <rect key="frame" x="20" y="450" width="560" height="150"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-4k-Ugt">
-                                <rect key="frame" x="20" y="450" width="560" height="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPV-Pf-UJM">
+                                <rect key="frame" x="20" y="300" width="560" height="150"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -45,10 +59,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZWj-AF-3KF" firstAttribute="trailing" secondItem="CPV-Pf-UJM" secondAttribute="trailing" id="2hx-jp-7oZ"/>
+                            <constraint firstItem="CPV-Pf-UJM" firstAttribute="leading" secondItem="0mt-FT-9qX" secondAttribute="leading" id="3C3-Zo-hst"/>
+                            <constraint firstItem="ZWj-AF-3KF" firstAttribute="centerY" secondItem="CPV-Pf-UJM" secondAttribute="centerY" id="4jT-Nc-Vah"/>
                             <constraint firstItem="CPV-Pf-UJM" firstAttribute="height" secondItem="p1D-KN-ZA5" secondAttribute="height" id="62a-By-0N7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CPV-Pf-UJM" secondAttribute="trailing" id="9Z7-f2-UQ5"/>
                             <constraint firstItem="wex-pL-dGL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9dc-Lh-Mgw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ldx-4k-Ugt" secondAttribute="trailing" id="KP3-Zv-rOJ"/>
+                            <constraint firstItem="0mt-FT-9qX" firstAttribute="centerY" secondItem="CPV-Pf-UJM" secondAttribute="centerY" id="MdA-Mj-NVt"/>
                             <constraint firstItem="Ldx-4k-Ugt" firstAttribute="top" secondItem="CPV-Pf-UJM" secondAttribute="bottom" id="PYA-BR-c8I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p1D-KN-ZA5" secondAttribute="trailing" id="Qhz-Hr-LF1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ldx-4k-Ugt" secondAttribute="bottom" id="Qz0-ad-mXk"/>
@@ -56,7 +74,9 @@
                             <constraint firstItem="p1D-KN-ZA5" firstAttribute="height" secondItem="wex-pL-dGL" secondAttribute="height" id="S67-xf-qC0"/>
                             <constraint firstItem="wex-pL-dGL" firstAttribute="bottom" secondItem="CPV-Pf-UJM" secondAttribute="top" id="aAe-82-f3q"/>
                             <constraint firstItem="p1D-KN-ZA5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="bqd-CN-P9H"/>
+                            <constraint firstItem="ZWj-AF-3KF" firstAttribute="leading" secondItem="0mt-FT-9qX" secondAttribute="trailing" id="d4U-kd-J1s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wex-pL-dGL" secondAttribute="trailing" id="hoS-1C-Cw6"/>
+                            <constraint firstItem="0mt-FT-9qX" firstAttribute="width" secondItem="ZWj-AF-3KF" secondAttribute="width" id="ofc-li-bcK"/>
                             <constraint firstItem="CPV-Pf-UJM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="psU-Va-WoY"/>
                             <constraint firstItem="Ldx-4k-Ugt" firstAttribute="height" secondItem="p1D-KN-ZA5" secondAttribute="height" id="q5c-Nw-e7v"/>
                             <constraint firstItem="Ldx-4k-Ugt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rP0-HM-fMj"/>
@@ -68,10 +88,12 @@
                         <outlet property="attitudeLabel" destination="Ldx-4k-Ugt" id="Xt9-AJ-YU0"/>
                         <outlet property="gravityLabel" destination="wex-pL-dGL" id="WcY-vH-zyj"/>
                         <outlet property="gryoscopeLabel" destination="p1D-KN-ZA5" id="03J-CD-R1Z"/>
+                        <outlet property="stabilityResult" destination="ZWj-AF-3KF" id="yx3-oq-jqU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="181" y="299"/>
         </scene>
     </scenes>
 </document>
