@@ -11,11 +11,9 @@ import CoreMotion
 
 class ViewController: UIViewController {
     
-    @IBOutlet var gryoscopeLabel:UILabel!
-    @IBOutlet var gravityLabel:UILabel!
-    @IBOutlet var accelerometerLabel:UILabel!
     @IBOutlet var attitudeLabel:UILabel!
     @IBOutlet var stabilityResult: ReportingBar!
+    @IBOutlet weak var stabilityLabel: UILabel!
     
     private let motionManager = CMMotionManager()
     private let queue = NSOperationQueue()
@@ -29,23 +27,12 @@ class ViewController: UIViewController {
         if motionManager.deviceMotionAvailable {
             motionManager.deviceMotionUpdateInterval = 0.5
             motionManager.startDeviceMotionUpdatesToQueue(queue, withHandler: { (motion:CMDeviceMotion?, error:NSError?) -> Void in
-                let rotationRate = motion!.rotationRate
-                let gravity = motion!.gravity
-                let userAcc = motion!.userAcceleration
                 let attitude = motion!.attitude
                 
-                let gryoscopeText = String(format:"Rotation Rate\n-------------\n x: %+.2f\n y: %+.2f\n z: %+.2f\n",
-                    rotationRate.x, rotationRate.y, rotationRate.z)
-                
-                let gravityText = String(format: "Gravity\n-------\n x: %+.2f\n y: %+.2f\n z: %+.2f\n",
-                    gravity.x, gravity.y, gravity.z)
-                
-                let accelerationText = String(format: "Acceleration\n------------\n x: %+.2f\n y: %+.2f\n z: %+.2f\n",
-                    userAcc.x, userAcc.y, userAcc.z)
-                
-                let attitudeText = String(format: "Attitude\n--------\n Roll: %+.2f\n Pitch: %+.2f\n Yaw: %+.2f\n",
+                let attitudeText = String(format: "Roll: %+.2f, Pitch: %+.2f, Yaw: %+.2f",
                     attitude.roll, attitude.pitch, attitude.yaw)
                 
+                // Populate the reference array
                 if self.referenceAttitude.isEmpty {
                     self.referenceAttitude = [CMAttitude](count:5, repeatedValue:attitude)
                 }
@@ -54,11 +41,10 @@ class ViewController: UIViewController {
                     self.referenceAttitude.insert(attitude, atIndex: 0)
                 }
                 
+                // See if the device has been stable
                 let stabilityScore = self.getDeviceStabilityScore(self.referenceAttitude)
                 
-                let attitudeChangeText = String(format: "Attitude Change\n--------\n Roll: %+.2f\n Pitch: %+.2f\n Yaw: %+.2f\n",
-                    attitude.roll, attitude.pitch, attitude.yaw)
-                
+                // Convert score to text
                 var stabilityText:String
                 var isStable:Bool = false
                 switch stabilityScore {
@@ -79,10 +65,8 @@ class ViewController: UIViewController {
                 
 
                 dispatch_async(dispatch_get_main_queue(), {
-                    self.gryoscopeLabel.text = gryoscopeText
-                    self.gravityLabel.text = gravityText
-                    self.accelerometerLabel.text = attitudeChangeText + stabilityText
                     self.attitudeLabel.text = attitudeText
+                    self.stabilityLabel.text = stabilityText
                     self.stabilityResult.addResult(isStable)
                     
                     
