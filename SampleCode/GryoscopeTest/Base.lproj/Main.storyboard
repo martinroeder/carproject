@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -18,15 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWj-AF-3KF" userLabel="ReportingView" customClass="ReportingBar" customModule="GryoscopeTest" customModuleProvider="target">
-                                <rect key="frame" x="20" y="86.5" width="560" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Cbb-qn-M4j"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Attitude Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-4k-Ugt">
-                                <rect key="frame" x="20" y="154.5" width="560" height="20.5"/>
+                                <rect key="frame" x="20" y="194.5" width="560" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -34,18 +27,44 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ky5-R9-ViF">
                                 <rect key="frame" x="20" y="52" width="560" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ck8-V1-key" customClass="ReportingChart" customModule="GryoscopeTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="282" width="560" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="uHn-dh-xpj"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xep-F6-a8D">
+                                <rect key="frame" x="20" y="247" width="560" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWj-AF-3KF" userLabel="ReportingView" customClass="ReportingBar" customModule="GryoscopeTest" customModuleProvider="target">
+                                <rect key="frame" x="20" y="86" width="560" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Cbb-qn-M4j"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ZWj-AF-3KF" secondAttribute="trailing" id="2Xw-ey-ygL"/>
+                            <constraint firstItem="Ck8-V1-key" firstAttribute="top" secondItem="xep-F6-a8D" secondAttribute="bottom" constant="8.5" id="44L-MM-GOy"/>
+                            <constraint firstItem="xep-F6-a8D" firstAttribute="top" secondItem="Ldx-4k-Ugt" secondAttribute="bottom" constant="32" id="8D9-8H-yHu"/>
                             <constraint firstItem="Ldx-4k-Ugt" firstAttribute="top" secondItem="ZWj-AF-3KF" secondAttribute="bottom" constant="8" id="FbZ-cI-Vth"/>
+                            <constraint firstItem="xep-F6-a8D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="I3W-UK-5nL"/>
                             <constraint firstItem="Ldx-4k-Ugt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ITA-ZP-zbP"/>
                             <constraint firstItem="ZWj-AF-3KF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KUN-Z2-f88"/>
                             <constraint firstItem="Ky5-R9-ViF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ooh-IA-Jak"/>
+                            <constraint firstItem="xep-F6-a8D" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VG3-YW-3F6"/>
                             <constraint firstItem="ZWj-AF-3KF" firstAttribute="top" secondItem="Ky5-R9-ViF" secondAttribute="bottom" constant="8" id="ZP3-n3-VAM"/>
+                            <constraint firstItem="Ck8-V1-key" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zd4-AX-ixj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ck8-V1-key" secondAttribute="trailing" id="dXB-bB-4BB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ldx-4k-Ugt" secondAttribute="trailing" id="pJz-86-E1j"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ky5-R9-ViF" secondAttribute="trailing" id="roZ-vR-5kS"/>
                             <constraint firstItem="Ky5-R9-ViF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="tUy-6g-u4A"/>

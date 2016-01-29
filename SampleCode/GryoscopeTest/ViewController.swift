@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         if motionManager.deviceMotionAvailable {
             motionManager.deviceMotionUpdateInterval = 0.5
             motionManager.startDeviceMotionUpdatesToQueue(queue, withHandler: { (motion:CMDeviceMotion?, error:NSError?) -> Void in
+
                 let attitude = motion!.attitude
-                
                 let attitudeText = String(format: "Roll: %+.2f, Pitch: %+.2f, Yaw: %+.2f",
                     attitude.roll, attitude.pitch, attitude.yaw)
                 

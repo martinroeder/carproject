@@ -15,6 +15,7 @@
 		203751811C4EC8EA00EAF142 /* GryoscopeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203751801C4EC8EA00EAF142 /* GryoscopeTestTests.swift */; };
 		2037518C1C4EC8EA00EAF142 /* GryoscopeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2037518B1C4EC8EA00EAF142 /* GryoscopeTestUITests.swift */; };
 		209058C81C54156E0072B121 /* ReportingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209058C71C54156E0072B121 /* ReportingBar.swift */; };
+		20A860271C5A9D8A00C2DE75 /* ReportingChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A860261C5A9D8A00C2DE75 /* ReportingChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2037518B1C4EC8EA00EAF142 /* GryoscopeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GryoscopeTestUITests.swift; sourceTree = "<group>"; };
 		2037518D1C4EC8EA00EAF142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		209058C71C54156E0072B121 /* ReportingBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportingBar.swift; path = ../ReportingBar.swift; sourceTree = "<group>"; };
+		20A860261C5A9D8A00C2DE75 /* ReportingChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportingChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				209058C71C54156E0072B121 /* ReportingBar.swift */,
+				20A860261C5A9D8A00C2DE75 /* ReportingChart.swift */,
 				2037516B1C4EC8EA00EAF142 /* AppDelegate.swift */,
 				2037516D1C4EC8EA00EAF142 /* ViewController.swift */,
 				2037516F1C4EC8EA00EAF142 /* Main.storyboard */,
@@ -262,6 +265,7 @@
 				2037516E1C4EC8EA00EAF142 /* ViewController.swift in Sources */,
 				209058C81C54156E0072B121 /* ReportingBar.swift in Sources */,
 				2037516C1C4EC8EA00EAF142 /* AppDelegate.swift in Sources */,
+				20A860271C5A9D8A00C2DE75 /* ReportingChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

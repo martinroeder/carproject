@@ -61,6 +61,11 @@ class ReportingBar: UIView {
                 index++
             }
             let resultPath = UIBezierPath(rect:CGRect(x: x, y: y, width: wNext, height: h))
+//            UIGraphicsBeginImageContext(<#T##size: CGSize##CGSize#>)
+//            UIGraphicsGetCurrentContext()
+//            CGContextMoveToPoint(<#T##c: CGContext?##CGContext?#>, <#T##x: CGFloat##CGFloat#>, <#T##y: CGFloat##CGFloat#>)
+//            CGContextAddLines(<#T##c: CGContext?##CGContext?#>, <#T##points: UnsafePointer<CGPoint>##UnsafePointer<CGPoint>#>, <#T##count: Int##Int#>)
+//            let new = UIGraphicsGetImageFromCurrentImageContext()
             
             // Draw rectangle
             resultPath.fill()
